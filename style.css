@@ -1,5 +1,5 @@
 :root {
-  --bkg: rgb(255, 237, 214);
+  --bkg: rgb(90, 156, 156);
   --tube-diam-w: 1.554%;
   --tube-diam-h: 2.331%;
   --white-stripe-width: 0.5%;
@@ -14,8 +14,13 @@
 .wrapper {
   width: 100%;
   padding-top: 66.666%;
-  background-color: rgb(255, 237, 214);
+  background-color: var(--bkg);
   position: relative;
+  background: linear-gradient(
+    to bottom,
+    var(--bkg) 0% 89.75%,
+    rgb(194, 97, 97) 0% 100%
+  );
 }
 .wrapper * {
   position: absolute;
@@ -35,33 +40,19 @@
   width: 4.14%;
   transform: rotate(15deg);
 
-  background: linear-gradient(
-      to bottom,
+  background: radial-gradient(
       rgba(0, 0, 0, 0) 0% 40%,
-      var(--chrome) 50% 100%
+      rgba(255, 255, 255, 0.25) 45%,
+      rgba(0, 0, 0, 0.6) 50% 51%,
+      rgba(255, 255, 255, 0.9) 53% 55%,
+      rgba(0, 0, 0, 0.6) 63%,
+      rgba(0, 0, 0, 0.1) 70% 80%,
+      rgba(199, 255, 125, 0.877) 0% 100%
     ),
-    linear-gradient(
-      -60deg,
-      var(--chrome) 0% 18%,
-      rgba(255, 255, 255, 0.3) 18% 20%,
-      rgba(255, 255, 255, 0.9) 21% 24%,
-      rgba(0, 0, 0, 0.2) 26% 28%,
-      rgba(0, 0, 0, 0) 30% 100%
-    ),
-    linear-gradient(-75deg, rgba(0, 0, 0, 0) 0% 0%),
-    linear-gradient(
-      -90deg,
-      rgba(0, 0, 0, 0) 0% 0%,
-      rgba(255, 255, 255, 0.25) 0% 8%,
-      rgba(0, 0, 0, 0.6) 8% 9%,
-      rgba(255, 255, 255, 0.9) 13% 19%,
-      rgba(0, 0, 0, 0.6) 23% 25%,
-      rgba(0, 0, 0, 0.1) 30% 32%,
-      rgba(0, 0, 0, 0) 0% 100%
-    ),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0) 0% 45%, var(--chrome) 50% 100%),
     linear-gradient(-90deg, var(--chrome) 0% 35%, rgba(0, 0, 0, 0) 0% 100%);
-  background-size: 100% 100%, 80% 60%, 100% 75%, 100% 75%, 100% 100%;
-  background-position: 0 0, 60% 90%, 0 0, 0 0, 0 0;
+  background-size: 200% 220%, 100% 100%, 100% 100%;
+  background-position: 93% 77%, 0 0, 0 0;
   background-repeat: no-repeat;
   border-radius: 0% 0% 90% 5%;
 }
@@ -79,8 +70,6 @@
     var(--bkg) 40% 97%,
     rgba(0, 0, 0, 0) 0% 100%
   );
-  box-shadow: 0.25rem 0px 0px rgba(0, 0, 0, 0.5),
-    25% 0px 0px rgba(255, 255, 255, 1);
 }
 
 .stem {
@@ -118,6 +107,50 @@
   background-size: 100% 100%, 32% 30%, 100% 50%;
   background-repeat: no-repeat, no-repeat, no-repeat;
 }
+.bars::before {
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 100% 0 0 25%;
+  background: linear-gradient(
+      -65deg,
+      rgba(0, 0, 0, 0) 0% 45%,
+      rgb(175, 154, 127) 47%,
+      rgb(209, 183, 152) 53%,
+      rgba(0, 0, 0, 0) 55% 100%
+    ),
+    linear-gradient(
+      225deg,
+      rgba(0, 0, 0, 0) 0% 22%,
+      rgb(175, 154, 127) 22%,
+      rgb(209, 183, 152) 23%,
+      rgba(0, 0, 0, 0) 24% 32%,
+      rgb(175, 154, 127) 32%,
+      rgb(209, 183, 152) 33%,
+      rgba(0, 0, 0, 0) 34% 44%,
+      rgb(175, 154, 127) 44%,
+      rgb(209, 183, 152) 45%,
+      rgba(0, 0, 0, 0) 45% 55%,
+      rgb(175, 154, 127) 55%,
+      rgb(209, 183, 152) 56%,
+      rgba(0, 0, 0, 0) 57% 67%,
+      rgb(175, 154, 127) 67%,
+      rgb(209, 183, 152) 68%,
+      rgba(0, 0, 0, 0) 69% 79%,
+      rgb(175, 154, 127) 79%,
+      rgb(209, 183, 152) 80%,
+      rgba(0, 0, 0, 0) 81% 91%,
+      rgb(175, 154, 127) 91%,
+      rgb(209, 183, 152) 92%,
+      rgba(0, 0, 0, 0) 0% 100%
+    );
+  background-size: 15% 20%, 100% 80%;
+  background-position: 100% 100%, 0 0;
+  background-repeat: repeat-x;
+}
 .bars::after {
   position: absolute;
   bottom: 50%;
@@ -127,8 +160,8 @@
   width: 80%;
   background: linear-gradient(to top, var(--bkg) 0% 100%);
   border-radius: 100% 0 0 20%;
-  background-size: 100%, 32% 50%;
-  background-position: 0 0, 100% 0;
+  background-size: 100%;
+  background-position: 0 0;
   transform: translateY(50%);
 }
 .brake {
@@ -142,6 +175,42 @@
   border-radius: 0 0 30% 0;
 }
 .brake::after {
+  position: absolute;
+  top: 35%;
+  right: 50%;
+  width: 100%;
+  height: 200%;
+  content: "";
+  background: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0) 0% 60%,
+      rgb(0, 0, 0) 0% 90%
+    ),
+    linear-gradient(
+      -95deg,
+      rgba(0, 0, 0, 0) 0% 28%,
+      var(--chrome) 28% 48%,
+      rgba(0, 0, 0, 0) 40% 100%
+    ),
+    linear-gradient(-80deg, rgba(0, 0, 0, 0) 0% 35%, var(--bkg) 0% 90%),
+    linear-gradient(
+      -75deg,
+      rgba(0, 0, 0, 0) 0% 20%,
+      var(--chrome) 20% 38%,
+      rgba(0, 0, 0, 0) 0% 100%
+    ),
+    linear-gradient(
+      -108deg,
+      rgba(0, 0, 0, 0) 0% 21%,
+      var(--chrome) 21% 39%,
+      rgba(0, 0, 0, 0) 0% 100%
+    );
+
+  background-size: 100% 20%, 100% 30%, 100% 33%, 100% 32%, 100% 30%;
+  background-position: 0 0, 0 0, 0 85%, 0 83%, 0 40%;
+  background-repeat: no-repeat;
+}
+.brake::before {
   position: absolute;
   bottom: -5%;
   right: 2%;
@@ -438,18 +507,27 @@
 .chainring > span::before {
   transform: rotate(30deg);
 }
-.chain {
-  top: 67%;
+/* .chain {
+  top: 67.5%;
   left: 53%;
   height: 20%;
   width: 23%;
   background-color: rgba(255, 0, 0, 0.377);
-  background: radial-gradient(rgb(43, 43, 43) 0% 25%, rgba(0, 0, 0, 0) 10% 100%),
-    linear-gradient(90deg, grey 0% 50%, rgb(179, 179, 179) 50% 100%);
-  background-size: 5% 8%, 7% 4%;
+  background: radial-gradient(rgb(87, 87, 87) 0% 40%, rgba(0, 0, 0, 0) 10% 100%),
+    linear-gradient(
+      90deg,
+      rgb(128, 128, 128) 0% 50%,
+      rgb(172, 172, 172) 50% 100%
+    ),
+    linear-gradient(
+      60deg,
+      rgb(128, 128, 128) 0% 50%,
+      rgb(172, 172, 172) 50% 100%
+    );
+  background-size: 2.5% 4%, 10% 4%, 10% 4%;
   background-repeat: repeat-x;
-  background-position: 0% -1.25%, 0 1%;
-}
+  background-position: 0 0, 0 0, 100% 100%;
+} */
 /* .cranks {
   top: 57.35%;
   left: 43.75%;
@@ -529,7 +607,7 @@
     linear-gradient(to bottom, var(--bike-color) 0% 100%);
 }
 .wheel {
-  top: 40%;
+  top: 44%;
   height: 50%;
   width: 33%;
   border-radius: 100%;
