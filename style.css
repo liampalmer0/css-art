@@ -803,17 +803,18 @@
 
 .wrapper.saber {
   position: relative;
-  width: 50%;
+  width: 100%;
   padding-top: 50%;
   background-color: rgb(108, 127, 145);
+  overflow-x: hidden;
 }
 .obiwan {
   position: absolute;
   content: "";
   top: 33%;
-  right: 30%;
+  left: 25%;
   height: 50%;
-  width: 55%;
+  width: 27.25%;
   background: linear-gradient(to left, rgb(145, 145, 145) 0% 100%),
     linear-gradient(to left, rgb(0, 0, 0) 0% 100%),
     linear-gradient(
@@ -834,9 +835,36 @@
       black 10% 90%,
       rgba(0, 0, 0, 0) 90% 100%
     );
-  background-size: 28% 27%, 25% 27%, 5% 25%, 5% 25%, 100% 25%;
+  background-size: 27% 27%, 28% 27%, 5% 25%, 5% 25%, 100% 25%;
   background-repeat: no-repeat, no-repeat, repeat-x, repeat-x, no-repeat;
-  background-position: 28% center, 0 center, -5% center, -5% center, 0 center;
+  background-position: 31% center, 0% center, -5% center, -5% center, 0 center;
+}
+.obiwan::before {
+  position: absolute;
+  content: "";
+  top: 0%;
+  right: 50%;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0) 0% 20%,
+      rgb(135, 135, 135) 0% 100%
+    ),
+    linear-gradient(225deg, rgba(0, 0, 0, 0) 0% 20%, rgb(135, 135, 135) 0% 100%),
+    linear-gradient(315deg, rgba(0, 0, 0, 0) 0% 20%, rgb(135, 135, 135) 0% 100%),
+    linear-gradient(45deg, rgba(0, 0, 0, 0) 0% 20%, rgb(135, 135, 135) 0% 100%),
+    linear-gradient(to bottom, rgb(37, 37, 37) 0% 100%),
+    linear-gradient(to bottom, rgb(126, 126, 126) 0% 100%),
+    linear-gradient(to bottom, rgb(145, 145, 145) 0% 100%),
+    linear-gradient(to bottom, rgb(145, 145, 145) 0% 100%),
+    linear-gradient(to bottom, rgb(126, 126, 126) 0% 100%),
+    linear-gradient(to bottom, rgb(145, 145, 145) 0% 100%);
+  background-repeat: no-repeat;
+  background-size: 12% 5%, 12% 5%, 12% 5%, 12% 5%, 1.5% 26%, 8% 24%, 2% 26%,
+    18% 27%, 1% 27%, 2% 26%;
+  background-position: 25.5% 34%, 30% 34%, 30% 66.5%, 25.5% 66.5%, 49.5% 50%,
+    45% 50%, 40% 50%, 26% 50%, 20.5% 50%, 19% 50%;
 }
 .obiwan::after {
   position: absolute;
@@ -845,13 +873,36 @@
   left: 100%;
   height: 100%;
   width: 100%;
-  background: linear-gradient(to bottom, gold 25% 100%),
-    linear-gradient(to bottom, gold 25% 100%),
-    linear-gradient(to bottom, gold 25% 100%),
-    linear-gradient(to bottom, gold 25% 100%),
-    linear-gradient(to bottom, rgb(102, 94, 50) 25% 100%),
-    linear-gradient(to bottom, gold 25% 100%);
+  background: linear-gradient(to bottom, gold 0% 100%),
+    linear-gradient(to bottom, gold 0% 100%),
+    linear-gradient(to bottom, rgb(226, 197, 29) 0% 100%),
+    linear-gradient(to bottom, gold 0% 100%),
+    linear-gradient(to bottom, gold 0% 100%),
+    linear-gradient(to bottom, rgb(102, 94, 50) 0% 100%),
+    linear-gradient(to bottom, gold 0% 100%),
+    linear-gradient(to bottom, rgb(145, 145, 145) 0% 100%),
+    linear-gradient(to bottom, rgb(126, 126, 126) 0% 100%),
+    linear-gradient(to bottom, rgb(145, 145, 145) 0% 100%),
+    linear-gradient(to bottom, rgb(126, 126, 126) 0% 100%),
+    linear-gradient(to bottom, rgb(145, 145, 145) 0% 100%);
   background-repeat: no-repeat;
-  background-size: 8% 10%, 6% 12%, 5% 28%, 1.25% 10%, 0.5% 9.5%, 1.25% 10%;
-  background-position: 0 50%, 8% 50%, 14% 50%, 18.5% 50%, 19.5% 50%, 20.25% 50%;
+  background-size: 8% 10%, 6% 12%, 1.5% 29%, 5% 28%, 1.25% 10%, 0.5% 9.5%,
+    1.25% 10%, 4% 22%, 1.5% 24%, 10% 28%, 3% 30%, 1.5% 32%;
+  background-position: 0 50%, 8% 50%, 13% 50%, 14% 50%, 18.5% 50%, 19.5% 50%,
+    20.25% 50%, 22% 50%, 25.5% 50%, 29.5% 50%, 37.75% 50%, 40% 50%;
+}
+.saber > .blade {
+  position: absolute;
+  top: 45.5%;
+  left: 63.35%;
+  width: 50%;
+  height: 25%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0% 25%,
+    rgb(168, 255, 243) 35%,
+    rgb(236, 255, 253) 45% 55%,
+    rgb(168, 255, 243) 65%,
+    rgba(0, 0, 0, 0) 75% 100%
+  );
 }
