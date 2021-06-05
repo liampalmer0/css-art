@@ -10,8 +10,12 @@
   --black: rgb(43, 43, 43);
   --white: rgb(231, 230, 225);
   --chrome: rgb(192, 192, 192);
+  --bahn-color: rgb(253, 223, 51);
 }
-.bike {
+body {
+  margin: 0;
+}
+.wrapper.bike {
   width: 100%;
   padding-top: 66.666%;
   background-color: var(--bkg);
@@ -805,14 +809,15 @@
   position: relative;
   width: 100%;
   padding-top: 50%;
-  background-color: rgb(108, 127, 145);
+  background-color: rgb(212, 172, 126);
   overflow-x: hidden;
 }
 .obiwan {
   position: absolute;
   content: "";
-  top: 33%;
-  left: 25%;
+  top: 50%;
+  left: 18%;
+  transform: translateY(-50%);
   height: 50%;
   width: 27.25%;
   background: linear-gradient(to left, rgb(145, 145, 145) 0% 100%),
@@ -861,10 +866,10 @@
     linear-gradient(to bottom, rgb(126, 126, 126) 0% 100%),
     linear-gradient(to bottom, rgb(145, 145, 145) 0% 100%);
   background-repeat: no-repeat;
-  background-size: 12% 5%, 12% 5%, 12% 5%, 12% 5%, 1.5% 26%, 8% 24%, 2% 26%,
+  background-size: 12% 5%, 12% 5%, 12% 5%, 12% 5%, 1.5% 26%, 8% 24%, 2.25% 26%,
     18% 27%, 1% 27%, 2% 26%;
-  background-position: 25.5% 34%, 30% 34%, 30% 66.5%, 25.5% 66.5%, 49.5% 50%,
-    45% 50%, 40% 50%, 26% 50%, 20.5% 50%, 19% 50%;
+  background-position: 25.5% 34%, 30% 34%, 30% 66%, 25.5% 66%, 49.5% 50%,
+    45% 50%, 40% 50%, 26% 50%, 20.75% 50%, 19% 50%;
 }
 .obiwan::after {
   position: absolute;
@@ -878,7 +883,7 @@
     linear-gradient(to bottom, rgb(226, 197, 29) 0% 100%),
     linear-gradient(to bottom, gold 0% 100%),
     linear-gradient(to bottom, gold 0% 100%),
-    linear-gradient(to bottom, rgb(102, 94, 50) 0% 100%),
+    linear-gradient(to bottom, rgb(226, 197, 29) 0% 100%),
     linear-gradient(to bottom, gold 0% 100%),
     linear-gradient(to bottom, rgb(145, 145, 145) 0% 100%),
     linear-gradient(to bottom, rgb(126, 126, 126) 0% 100%),
@@ -886,23 +891,140 @@
     linear-gradient(to bottom, rgb(126, 126, 126) 0% 100%),
     linear-gradient(to bottom, rgb(145, 145, 145) 0% 100%);
   background-repeat: no-repeat;
-  background-size: 8% 10%, 6% 12%, 1.5% 29%, 5% 28%, 1.25% 10%, 0.5% 9.5%,
+  background-size: 8% 10%, 5.25% 12%, 1.5% 29%, 5% 28%, 1.25% 10%, 0.5% 9.5%,
     1.25% 10%, 4% 22%, 1.5% 24%, 10% 28%, 3% 30%, 1.5% 32%;
   background-position: 0 50%, 8% 50%, 13% 50%, 14% 50%, 18.5% 50%, 19.5% 50%,
-    20.25% 50%, 22% 50%, 25.5% 50%, 29.5% 50%, 37.75% 50%, 40% 50%;
+    20.25% 50%, 22% 50%, 25.5% 50%, 29.5% 50%, 37.5% 50%, 39.75% 50%;
 }
 .saber > .blade {
   position: absolute;
-  top: 45.5%;
-  left: 63.35%;
+  top: 50%;
+  left: 55%;
+  transform: translateY(-50%);
   width: 50%;
   height: 25%;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0) 0% 25%,
+    rgba(255, 255, 255, 0) 0% 25%,
     rgb(168, 255, 243) 35%,
     rgb(236, 255, 253) 45% 55%,
     rgb(168, 255, 243) 65%,
-    rgba(0, 0, 0, 0) 75% 100%
+    rgba(255, 255, 255, 0) 75% 100%
   );
+}
+.wrapper.train {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 2rem 1rem 0 1rem;
+  background-color: rgb(54, 54, 54);
+}
+.wrapper .bahn {
+  width: calc(750px * 3);
+}
+.bahn .car {
+  position: relative;
+  left: 150px;
+  --window: rgb(196, 216, 212);
+  --door-color: rgb(240, 212, 53);
+  height: 150px;
+  background-color: yellow;
+  background: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0) 0% 97%,
+      rgb(102, 96, 59) 97% 100%
+    ),
+    linear-gradient(to bottom, rgb(51, 51, 51) 0% 100%),
+    radial-gradient(var(--window) 0% 2%, rgba(0, 0, 0, 0) 2% 100%),
+    radial-gradient(var(--window) 0% 2%, rgba(0, 0, 0, 0) 2% 100%),
+    linear-gradient(to right, var(--window) 0% 3%, rgba(0, 0, 0, 0) 0% 100%),
+    linear-gradient(to right, var(--window) 0% 6.15%, rgba(0, 0, 0, 0) 0% 100%),
+    radial-gradient(var(--window) 0% 2%, rgba(0, 0, 0, 0) 2% 100%),
+    radial-gradient(var(--window) 0% 2%, rgba(0, 0, 0, 0) 2% 100%),
+    radial-gradient(var(--window) 0% 2%, rgba(0, 0, 0, 0) 2% 100%),
+    radial-gradient(var(--window) 0% 2%, rgba(0, 0, 0, 0) 2% 100%),
+    linear-gradient(to right, var(--window) 0% 3%, rgba(0, 0, 0, 0) 0% 100%),
+    linear-gradient(to right, var(--window) 0% 6.15%, rgba(0, 0, 0, 0) 0% 100%),
+    radial-gradient(var(--window) 0% 2%, rgba(0, 0, 0, 0) 2% 100%),
+    radial-gradient(var(--window) 0% 2%, rgba(0, 0, 0, 0) 2% 100%),
+    linear-gradient(to right, var(--bahn-color) 0% 100%),
+    radial-gradient(var(--window) 0% 6.75%, rgba(0, 0, 0, 0) 0% 100%),
+    radial-gradient(var(--window) 0% 6.75%, rgba(0, 0, 0, 0) 0% 100%),
+    radial-gradient(var(--window) 0% 6.75%, rgba(0, 0, 0, 0) 0% 100%),
+    radial-gradient(rgb(90, 90, 90) 0% 0.6%, rgba(0, 0, 0, 0) 0% 100%),
+    radial-gradient(rgb(90, 90, 90) 0% 0.6%, rgba(0, 0, 0, 0) 0% 100%),
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 0% 15%,
+      var(--door-color) 15% 21.35%,
+      rgb(116, 104, 73) 21.35% 21.65%,
+      var(--door-color) 21.65% 28%,
+      rgba(0, 0, 0, 0) 28% 74%,
+      var(--door-color) 74% 80.35%,
+      rgb(116, 104, 73) 80.35% 80.65%,
+      var(--door-color) 80.65% 87%,
+      rgba(0, 0, 0, 0) 87% 100%
+    ),
+    linear-gradient(
+      to bottom,
+      var(--bahn-color) 0% 60%,
+      rgba(0, 0, 0, 0) 60% 100%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0% 5%,
+      rgba(0, 0, 0, 0.1) 15% 25%,
+      rgba(0, 0, 0, 0.15) 35%,
+      rgba(0, 0, 0, 0) 40% 100%
+    ),
+    linear-gradient(
+      to left,
+      var(--bahn-color) 0% 97%,
+      rgba(0, 0, 0, 0) 97% 100%
+    ),
+    linear-gradient(
+      to left,
+      rgba(66, 65, 57, 0.753) 0% 97%,
+      rgba(0, 0, 0, 0) 97% 100%
+    ),
+    linear-gradient(
+      to left,
+      var(--bahn-color) 0% 97%,
+      rgba(0, 0, 0, 0) 97% 100%
+    );
+  background-position: 0 0, 0 100%, -325px -353px, -300px -353px, 50px 12px,
+    39.5px 20px, -325px -314px, -300px -314px, 325px -353px, 350px -353px,
+    700px 12px, 689.5px 20px, 325px -314px, 350px -314px, 100px 0, -75px -325px,
+    15px -325px, 105px -325px, -138px -350px, 150px -350px, 0 100%, 0 0, 50% 0%,
+    0 0, 0 100%, 0 0;
+  background-size: 750px 100%, 750px 10px, 750px 750px, 750px 750px, 750px 60px,
+    750px 45px, 750px 750px, 750px 750px, 750px 750px, 750px 750px, 750px 60px,
+    750px 45px, 750px 750px, 750px 750px, 750px 12px, 750px 750px, 750px 750px,
+    750px 750px, 750px 750px, 750px 750px, 750px 138px, 750px 150px, 750px 10px,
+    750px 12px, 750px 7.5px, 750px 100%;
+  background-repeat: repeat-x, repeat-x, repeat-x, repeat-x, repeat-x, repeat-x,
+    repeat-x, repeat-x, repeat-x, repeat-x, repeat-x, repeat-x, repeat-x,
+    repeat-x, repeat-x, repeat-x, repeat-x, repeat-x, repeat-x, repeat-x,
+    repeat-x, repeat, repeat, repeat-x, repeat-x, repeat-x;
+}
+.bahn .car::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -89px;
+  height: 150px;
+  width: 112px;
+  border-radius: 10% 0 0 5%;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 0% 90%,
+      var(--bahn-color) 90% 100%
+    ),
+    linear-gradient(to bottom, var(--window) 0% 100%),
+    radial-gradient(black 0% 50%, rgba(0, 0, 0, 0) 50% 100%),
+    radial-gradient(black 0% 50%, rgba(0, 0, 0, 0) 50% 100%),
+    linear-gradient(to left, var(--bahn-color) 0% 100%);
+  background-size: 100% 100%, 112px 75px, 15px 15px, 15px 15px, 100% 100%;
+  background-position: 0 0, 0 0, 10px 75%, 80px 75%, 0 0;
+  background-repeat: no-repeat;
+  box-shadow: 12px 12px 0 var(--bahn-color) inset;
 }
