@@ -993,17 +993,17 @@ body {
   background-repeat: no-repeat;
   box-shadow: 12px 12px 0 var(--bahn-color) inset;
 }
-.split-50 {
+.split {
   display: flex;
   flex-flow: row wrap;
 }
 .wrapper.traffic {
+  flex: 500px;
   margin: 0;
   position: relative;
   width: 50%;
   height: 400px;
   background-color: rgb(57, 72, 75);
-  overflow: scroll;
 }
 .traffic .lights {
   top: calc(50% - 90px);
@@ -1123,9 +1123,10 @@ body {
   --skin-color-2: rgb(219, 159, 118);
   --hair-color: rgb(31, 30, 30);
   --eye-color: rgb(141, 50, 8);
+  flex: 400px;
   width: 50%;
   height: 400px;
-  background: linear-gradient(to bottom, #fff 0%);
+  background: #fff;
 }
 .edna .head {
   position: relative;
@@ -1317,23 +1318,24 @@ body {
   --face-color: rgb(65, 167, 51);
 }
 .wrapper.boss {
-  position: relative;
-  margin: 0;
-  height: 600px;
-  width: 750px;
-  background-color: var(--coffee-bkg);
-  overflow: hidden;
   --coffee-bkg: rgb(203, 238, 235);
   --can-color: rgb(41, 41, 41);
   --letter-color: rgb(245, 245, 245);
   --can-angle: -20deg;
   --can-width: 220px;
   --can-height: calc(var(--can-width) * 2.15);
+  flex: 600px;
+  position: relative;
+  margin: 0;
+  height: 600px;
+  width: 750px;
+  background-color: var(--coffee-bkg);
+  overflow: hidden;
 }
 .wrapper.boss::before {
   content: "";
   bottom: -60px;
-  left: 28px;
+  left: calc(50% - 364px);
   height: 300px;
   width: 200px;
   background: radial-gradient(
@@ -1360,7 +1362,7 @@ body {
 .wrapper.boss::after {
   content: "";
   top: -25px;
-  left: 126px;
+  left: calc(50% - 283px);
   height: 600px;
   width: 600px;
   background: radial-gradient(
@@ -1375,7 +1377,7 @@ body {
 }
 .boss > .can {
   top: 165px;
-  left: 190px;
+  left: calc(50% - 220px);
   width: var(--can-height);
   height: var(--can-width);
   background-color: var(--can-color);
@@ -1426,7 +1428,7 @@ body {
   right: 30px;
   border: var(--letter-color) solid 2px;
   width: 115px;
-  height: 22px;
+  height: auto;
   color: var(--letter-color);
   font-size: 16px;
   text-align: center;
@@ -1637,7 +1639,137 @@ body {
   background-position: 95% 35%, 5% 68%, 80% 6%, 35% 97%, 96% 22%, 4% 78%, 92% 0%,
     8% 100%;
 }
-
+.wrapper.wrench {
+  flex: 500px;
+  position: relative;
+  width: 100%;
+  height: 600px;
+  --tile-color: rgb(107, 127, 147);
+  --grout-color: rgb(60, 60, 74);
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 0px 2px,
+      var(--grout-color) 0px 5px,
+      rgba(0, 0, 0, 0) 8px 150px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 0px 2px,
+      var(--grout-color) 0px 5px,
+      rgba(0, 0, 0, 0) 8px 150px
+    ),
+    linear-gradient(0deg, var(--tile-color) 0% 100%);
+  background-size: 150px 150px;
+  background-repeat: repeat;
+  background-position: -50px;
+  overflow: hidden;
+}
+.wrench-body {
+  --handle-color: rgb(58, 58, 73);
+  --body-color: rgb(201, 185, 39);
+  --steel-color: rgb(187, 187, 187);
+  --green-detail: rgb(76, 139, 90);
+  position: absolute;
+  top: 2%;
+  left: calc(50% - 57px);
+  height: 600px;
+  width: 114px;
+  transform: rotate(-45deg);
+  background: radial-gradient(
+      circle at center,
+      rgba(0, 0, 0, 0) 0% 50%,
+      rgba(0, 0, 0, 0.5) 0% 52%,
+      var(--body-color) 0% 100%
+    ),
+    linear-gradient(
+      180deg,
+      var(--handle-color) 0% 25%,
+      var(--green-detail) 25% 50%,
+      var(--handle-color) 0% 100%
+    ),
+    radial-gradient(
+      circle at center,
+      var(--handle-color) 0% 90%,
+      rgba(0, 0, 0, 0) 0% 100%
+    ),
+    radial-gradient(
+      circle at center,
+      var(--handle-color) 0% 90%,
+      rgba(0, 0, 0, 0) 0% 100%
+    ),
+    radial-gradient(
+      circle at center,
+      var(--steel-color) 0% 15%,
+      var(--handle-color) 0% 19%,
+      var(--body-color) 0% 50%,
+      rgba(0, 0, 0, 0) 0% 100%
+    ),
+    linear-gradient(
+      -45deg,
+      rgba(0, 0, 0, 0) 0% 22%,
+      var(--body-color) 0% 50%,
+      rgba(0, 0, 0, 0) 0% 100%
+    ),
+    linear-gradient(
+      50deg,
+      rgba(0, 0, 0, 0) 0% 50%,
+      var(--steel-color) 0% 80%,
+      rgba(0, 0, 0, 0) 0% 100%
+    ),
+    linear-gradient(
+      50deg,
+      rgba(0, 0, 0, 0) 0% 30%,
+      var(--steel-color) 0% 60%,
+      rgba(0, 0, 0, 0) 0% 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 0% 15%,
+      var(--handle-color) 0% 20%,
+      rgba(0, 0, 0, 0) 20% 80%,
+      var(--handle-color) 0% 85%,
+      rgba(255, 255, 255, 0) 0% 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0% 24%,
+      var(--body-color) 0% 70%,
+      var(--handle-color) 70% 80%,
+      rgba(0, 0, 0, 0) 0% 100%
+    );
+  background-size: 10% 29%, 10% 15%, 42% 30%, 42% 30%, 75% 10%, 75% 15%, 40% 18%,
+    40% 15%, 33% 60%, 33% 100%;
+  background-position: 42% 50%, 42% center, 38% 100%, 38% 100%, 25% 18%, 88% 8%,
+    90% 3%, 15% 8%, 40% center, 40% center;
+  background-repeat: no-repeat;
+}
+.wrench-body::before {
+  content: "";
+  top: 71%;
+  left: 28%;
+  height: 28%;
+  width: 30%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.2) 0% 50%,
+    rgba(0, 0, 0, 0) 0% 100%
+  );
+  background-position: center;
+  background-size: 200% 30%;
+  background-repeat: repeat-y;
+}
+.wrench-body::after {
+  content: "";
+  top: -4%;
+  right: 36%;
+  height: 15%;
+  width: 25%;
+  background: linear-gradient(0deg, var(--steel-color) 0% 100%);
+  background-position: 0 0;
+  background-size: 100% 70%;
+  background-repeat: no-repeat;
+  transform: rotate(-58deg) perspective(100px) rotateX(45deg);
+}
 @keyframes slide {
   to {
     transform: translateX(15%);
@@ -1715,10 +1847,10 @@ body {
 .goblin-yearbook .front-cover::before {
   content: "GOBLIN YEARBOOK";
   color: inherit;
-  width: 100%;
+  width: 80%;
   height: 100%;
   top: 25%;
-  left: 0;
+  right: 5%;
   text-align: center;
 }
 .goblin-yearbook .inner-cover {
@@ -1737,7 +1869,7 @@ body {
 .goblin-yearbook .inner-cover > * {
   position: static;
 }
-.goblin-yearbook .inner-cover  button{
+.goblin-yearbook .regen {
   font-size: 100%;
 }
 .goblin-yearbook .page > .face {
