@@ -1,0 +1,75 @@
+.wrapper.edna {
+  --lip-color: rgb(196, 69, 60);
+  --skin-color: rgb(236, 171, 128);
+  --skin-color-2: rgb(219, 159, 118);
+  --hair-color: rgb(31, 30, 30);
+  --eye-color: rgb(141, 50, 8);
+  flex: 400px;
+  width: 50%;
+  height: 400px;
+  background: #fff;
+}
+.edna .head {
+  position: relative;
+  height: 200px;
+  width: 300px;
+  top: calc(50% - 100px);
+  left: calc(50% - 125px);
+  border-radius: 100px 100px 50px 50px;
+  background: radial-gradient(rgba(0, 0, 0, 0) 0% 70%, white 70% 100%),
+    linear-gradient(to bottom, var(--hair-color) 0% 100%);
+  background-size: 500px 250px, 100%;
+  background-position: 50% 100%, 0 0;
+}
+.edna .head::before {
+  content: "";
+  bottom: -5%;
+  left: 22.25%;
+  height: 65%;
+  width: 55%;
+  border-radius: 0 0 100% 100%;
+  background: radial-gradient(rgba(0, 0, 0, 0) 0% 35%, var(--skin-color) 0% 100%),
+    radial-gradient(rgba(0, 0, 0, 0) 0% 35%, var(--skin-color) 0% 100%),
+    radial-gradient(rgb(255, 255, 255) 0% 30%, rgba(0, 0, 0, 0) 60% 100%),
+    radial-gradient(rgb(255, 255, 255) 0% 30%, rgba(0, 0, 0, 0) 60% 100%),
+    linear-gradient(
+      182deg,
+      var(--skin-color-2) 0% 77%,
+      black 75% 80%,
+      rgba(255, 251, 244, 0) 80% 100%
+    ),
+    linear-gradient(
+      178deg,
+      var(--skin-color-2) 0% 77%,
+      black 75% 80%,
+      rgba(255, 251, 244, 0) 80% 100%
+    ),
+    radial-gradient(rgba(0, 0, 0, 1) 0% 15%, var(--eye-color) 0% 22%, rgb(255, 255, 255) 0% 100%),
+    radial-gradient(rgba(0, 0, 0, 1) 0% 15%, var(--eye-color) 0% 22%, rgb(255, 255, 255) 0% 100%),
+    radial-gradient(var(--skin-color) 0% 50%, rgba(0, 0, 0, 0) 50% 100%),
+    linear-gradient(170deg, rgba(0, 0, 0, 0) 0% 60%, var(--lip-color) 0% 100%),
+    linear-gradient(190deg, rgba(0, 0, 0, 0) 0% 60%, var(--lip-color) 0% 100%),
+    linear-gradient(170deg, var(--lip-color) 0% 30%, rgba(0, 0, 0, 0) 0% 100%),
+    linear-gradient(190deg, var(--lip-color) 0% 30%, rgba(0, 0, 0, 0) 0% 100%),
+    linear-gradient(to bottom, var(--lip-color) 0% 100%),
+    linear-gradient(to bottom, var(--skin-color) 0% 100%);
+  background-size: 80px 80px, 80px 80px, 5px 5px, 5px 5px, 80px 80px, 80px 80px, 60px 60px,
+    60px 60px, 25px 10px, 35px 10px, 35px 10px, 35px 12px, 35px 12px, 25px 6px, 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 5px -15px, 83px -15px, 48px 29px, 126px 29px, 5px -35px, 83px -35px, 15px 0px,
+    93px 0px, 72px 81px, 48px 83px, 87px 83px, 85px 93px, 50px 93px, 75px 90px, 0 0;
+}
+.edna .head::after {
+  content: "";
+  top: 28%;
+  left: calc(50% - 100px);
+  height: 200px;
+  width: 200px;
+  background: radial-gradient(var(--skin-color-2) 0% 50%, rgba(0, 0, 0, 0) 50% 100%),
+    linear-gradient(to bottom, black 0% 100%),
+    radial-gradient(rgba(255, 255, 255, 0.1) 0% 53%, black 0% 65%, rgba(0, 0, 0, 0) 65% 100%),
+    radial-gradient(rgba(255, 255, 255, 0.1) 0% 53%, black 0% 65%, rgba(0, 0, 0, 0) 65% 100%);
+  background-size: 25% 25%, 20px 8px, 48% 48%, 48% 48%;
+  background-repeat: no-repeat;
+  background-position: 75px 45px, 90px 47px, 2px 0, 102px 0;
+}

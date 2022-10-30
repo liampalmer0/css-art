@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+}
+.wrapper *,
+.wrapper *::before,
+.wrapper *::after,
+.wrapper::before,
+.wrapper::after {
+  position: absolute;
+}
+.split {
+  display: flex;
+  flex-flow: row wrap;
+}
